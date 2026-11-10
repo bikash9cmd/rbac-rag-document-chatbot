@@ -9,8 +9,12 @@ STOPWORDS = frozenset(
     """a an and are as at be by can do does for from has have how i in is it its me my of on or
     our please tell that the their there this to us was we what when where which who why will with
     you your about any get much many should would could
+    something anything everything some know tell explain describe info information bit little help
     kati ke ko ka ki le lai ma cha chha chhan ho hun garne garnu pauchha paincha kahile kasari kun""".split()
-    # The second line is Romanized Nepali function words ("kati din" = "how many days").
+    # The third line is filler from broad questions ("tell me something about X"). Left in, a word
+    # like "something" that happens to appear once in the corpus looks rare and important, and
+    # drags in a sentence that shares nothing else with the question.
+    # The last line is Romanized Nepali function words ("kati din" = "how many days").
 )
 
 # Canonical forms so a question and a document that say the same thing share tokens. The
@@ -21,6 +25,8 @@ CANON = {
     "chhuti": "leave", "bida": "leave", "holiday": "leave",
     "din": "day", "days": "day", "mahina": "month", "barsa": "year", "barsha": "year",
     "kharcha": "expense", "bhatta": "allowance",
+    # The documents say "hydroelectric"; people usually say "hydropower".
+    "hydropower": "hydroelectric", "hydroelectricity": "hydroelectric",
 }
 
 
@@ -77,13 +83,18 @@ def npr(amount: int) -> str:
     return "Rs " + ",".join(groups + [tail])
 
 
+# A sentence ends at . ! or ? followed by a capital or digit, but not after an abbreviation such
+# as "Pvt." in "Kanchan Hydro Pvt. Ltd." or "Rs." in "Rs. 500".
+_SENT_SPLIT = re.compile(r"(?<!\bPvt\.)(?<!\bLtd\.)(?<!\bRs\.)(?<!\bNo\.)(?<!\bDr\.)(?<!\bMr\.)(?<!\bMs\.)(?<=[.!?])\s+(?=[A-Z0-9])")
+
+
 def sentences(text: str) -> list[str]:
     parts = []
     for line in text.splitlines():
         line = line.strip()
         if not line:
             continue
-        parts.extend(p.strip() for p in re.split(r"(?<=[.!?])\s+(?=[A-Z0-9])", line) if p.strip())
+        parts.extend(p.strip() for p in _SENT_SPLIT.split(line) if p.strip())
     return parts
 
 

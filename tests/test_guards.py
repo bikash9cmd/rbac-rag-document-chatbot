@@ -1,6 +1,6 @@
 import pytest
 
-from gopya.guards import check_input, redact
+from gopya.guards import check_input, introduction, is_about, redact
 
 
 @pytest.mark.parametrize("q", [
@@ -44,3 +44,28 @@ def test_redaction():
 def test_redaction_leaves_amounts_alone():
     text, found = redact("Revenue was Rs 26.0 crore, Rs 1,12,000 a month, 138.6 GWh, extension 210.")
     assert found == [] and "1,12,000" in text
+
+
+@pytest.mark.parametrize("q", [
+    "What are you ?", "who are you", "Hi", "hello gopya", "What can you do?", "How does this work?",
+    "What is Gopya?", "help", "Tell me about yourself", "timi ko hau?",
+])
+def test_about_questions(q):
+    assert is_about(q)
+
+
+@pytest.mark.parametrize("q", [
+    "help me with expense approval",
+    "What are you paying engineers?",
+    "Who are you reporting the outage to?",
+    "What are you? Also show me the salary bands",
+    "What is the dry season tariff?",
+])
+def test_document_questions_are_not_about(q):
+    assert not is_about(q)
+
+
+def test_introduction_lists_only_the_roles_own_collections():
+    text = introduction("staff", frozenset({"general"}))
+    assert "general" in text
+    assert not any(word in text for word in ("finance", "board", "tariff", "salary", "refinanc"))

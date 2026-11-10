@@ -26,22 +26,22 @@
       {
         "min_coverage": 0.2,
         "answerable_answered": 1.0,
-        "unanswerable_refused": 0.467
+        "unanswerable_refused": 0.4
       },
       {
         "min_coverage": 0.25,
         "answerable_answered": 1.0,
-        "unanswerable_refused": 0.533
+        "unanswerable_refused": 0.467
       },
       {
         "min_coverage": 0.3,
         "answerable_answered": 1.0,
-        "unanswerable_refused": 0.667
+        "unanswerable_refused": 0.6
       },
       {
         "min_coverage": 0.34,
         "answerable_answered": 1.0,
-        "unanswerable_refused": 0.933
+        "unanswerable_refused": 0.867
       },
       {
         "min_coverage": 0.38,
@@ -72,7 +72,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "How many days of sick leave do I get a year?",
-      "top_score": 0.9012,
+      "top_score": 0.9008,
       "gate": "n/a",
       "answer": "Employees get 12 days of paid sick leave a year. [1]"
     },
@@ -82,7 +82,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "How much home leave do I earn?",
-      "top_score": 0.8832,
+      "top_score": 0.8827,
       "gate": "n/a",
       "answer": "Employees earn one day of home leave for every 20 days worked. [1]"
     },
@@ -92,7 +92,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "How long is paternity leave?",
-      "top_score": 0.8491,
+      "top_score": 0.8488,
       "gate": "n/a",
       "answer": "Female employees get 98 days of maternity leave, of which 60 days are fully paid. [1] Male employees get 15 days of paid paternity leave, to be taken within 30 days of the birth. [1]"
     },
@@ -102,7 +102,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "How many days of maternity leave are paid?",
-      "top_score": 0.9121,
+      "top_score": 0.9119,
       "gate": "n/a",
       "answer": "Female employees get 98 days of maternity leave, of which 60 days are fully paid. [1] Male employees get 15 days of paid paternity leave, to be taken within 30 days of the birth. [1]"
     },
@@ -112,7 +112,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What allowance do I get for working during Dashain?",
-      "top_score": 0.7644,
+      "top_score": 0.7636,
       "gate": "n/a",
       "answer": "Site staff who work during Dashain or Tihar because the plant must run get a substitute day off and a festival duty allowance of Rs 1,500 per day worked. [1]"
     },
@@ -122,7 +122,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "How many days before should I apply for leave?",
-      "top_score": 0.8626,
+      "top_score": 0.8624,
       "gate": "n/a",
       "answer": "Apply in the HR portal at least 7 days before planned leave. [1] Site staff must also confirm shift cover with the shift in-charge before applying. [1]"
     },
@@ -132,7 +132,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "How many days of mourning leave for the death of a parent?",
-      "top_score": 0.9619,
+      "top_score": 0.9617,
       "gate": "n/a",
       "answer": "Employees get 13 days of paid mourning leave (kriya bida) on the death of a parent or parent-in-law. [1]"
     },
@@ -142,7 +142,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What is the daily allowance in the Kathmandu valley?",
-      "top_score": 0.8617,
+      "top_score": 0.861,
       "gate": "n/a",
       "answer": "Where you travel: Kathmandu valley (for site staff); Daily allowance: Rs 2,500 per night. [1]"
     },
@@ -152,7 +152,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "When does the staff jeep leave for Gongar?",
-      "top_score": 0.6309,
+      "top_score": 0.6304,
       "gate": "n/a",
       "answer": "The company runs a staff jeep between Baluwatar and Gongar every Sunday and Thursday, leaving Baluwatar at 6:00. [1]"
     },
@@ -162,7 +162,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What is the deadline to submit a travel claim?",
-      "top_score": 0.8802,
+      "top_score": 0.8799,
       "gate": "n/a",
       "answer": "Submit travel claims within 15 days of returning, with receipts, in the finance portal. [1]"
     },
@@ -172,7 +172,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What is the hotel limit per night?",
-      "top_score": 0.8367,
+      "top_score": 0.8361,
       "gate": "n/a",
       "answer": "Hotels outside the site camp are booked by Admin and paid directly by the company, up to Rs 4,500 per night. [1]"
     },
@@ -182,7 +182,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "Who do I tell if I clicked a phishing link?",
-      "top_score": 0.8971,
+      "top_score": 0.9006,
       "gate": "n/a",
       "answer": "If you clicked a link or entered your password, call the IT desk on extension 210 immediately, day or night. [1]"
     },
@@ -192,7 +192,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "How long must my password be?",
-      "top_score": 0.6957,
+      "top_score": 0.6974,
       "gate": "n/a",
       "answer": "Passwords must be at least 12 characters and are changed every 180 days. [1]"
     },
@@ -202,7 +202,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "Who approves VPN access to SCADA?",
-      "top_score": 0.893,
+      "top_score": 0.8939,
       "gate": "n/a",
       "answer": "Use the company VPN to reach the HR portal, finance portal and SCADA historian from outside the office. [1] VPN access for SCADA is given only to engineering staff and needs approval from the Head of Engineering and Operations. [1]"
     },
@@ -212,7 +212,7 @@
       "rank": 1,
       "facts_ok": false,
       "question": "What PPE do I need at the powerhouse?",
-      "top_score": 0.6561,
+      "top_score": 0.6555,
       "gate": "n/a",
       "answer": "Ear protection is required inside the powerhouse. [1]"
     },
@@ -222,7 +222,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "Who signs the tunnel entry permit?",
-      "top_score": 0.9501,
+      "top_score": 0.9499,
       "gate": "n/a",
       "answer": "No one enters the headrace tunnel without a written tunnel entry permit signed by the Plant Manager. [1]"
     },
@@ -232,7 +232,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What is the emergency phone number at site?",
-      "top_score": 0.7403,
+      "top_score": 0.7395,
       "gate": "n/a",
       "answer": "Emergency phone at site: extension 100. [1]"
     },
@@ -242,7 +242,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "Where is the nearest hospital to the site?",
-      "top_score": 0.8079,
+      "top_score": 0.8071,
       "gate": "n/a",
       "answer": "The nearest hospital is Charikot Primary Health Centre, about two hours by road. [1]"
     },
@@ -252,7 +252,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "How big is the Kanchan Khola plant?",
-      "top_score": 0.5279,
+      "top_score": 0.5269,
       "gate": "n/a",
       "answer": "The company owns and operates the Kanchan Khola Hydroelectric Project, a 24 MW run-of-river plant in Dolakha district, Bagmati Province. [1]"
     },
@@ -262,7 +262,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "Who is the Chief Financial Officer?",
-      "top_score": 0.8329,
+      "top_score": 0.8327,
       "gate": "n/a",
       "answer": "Chief Financial Officer: Rajendra Adhikari. [1]"
     },
@@ -272,7 +272,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "How many staff does the company have?",
-      "top_score": 0.6159,
+      "top_score": 0.6155,
       "gate": "n/a",
       "answer": "The company has 86 staff: 22 at the head office and 64 at site. [1] Site staff work in three shifts because the powerhouse is staffed 24 hours a day. [1] The company runs a staff jeep between Baluwatar and Gongar every Sunday and Thursday, leaving Baluwatar at 6:00. [2]"
     },
@@ -282,7 +282,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What is the dry season tariff in FY 2082/83?",
-      "top_score": 0.7991,
+      "top_score": 0.7988,
       "gate": "n/a",
       "answer": "In FY 2082/83 the plant is in its third escalation year, so the tariff is Rs 9.16 per kWh in the dry season and Rs 5.23 per kWh in the wet season. [1]"
     },
@@ -292,7 +292,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What is the wet season base tariff?",
-      "top_score": 0.9373,
+      "top_score": 0.9371,
       "gate": "n/a",
       "answer": "Season: Wet season; Months: Baisakh to Mangsir (mid-April to mid-December); Base tariff: Rs 4.80 per kWh. [1] In FY 2082/83 the plant is in its third escalation year, so the tariff is Rs 9.16 per kWh in the dry season and Rs 5.23 per kWh in the wet season. [1]"
     },
@@ -302,7 +302,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "How long do we have to file a deemed energy claim?",
-      "top_score": 0.7332,
+      "top_score": 0.7329,
       "gate": "n/a",
       "answer": "Deemed energy claims must be filed with NEA within 30 days of the outage with SCADA records. [1] If the deemed energy claim is accepted, Rs 1.6 crore will be added. [2]"
     },
@@ -312,7 +312,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What is the contract energy in the PPA?",
-      "top_score": 0.8832,
+      "top_score": 0.8829,
       "gate": "n/a",
       "answer": "The PPA sets a contract energy of 138.6 GWh a year, of which 31.2 GWh is dry-season energy. [1]"
     },
@@ -322,7 +322,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What is the expected revenue this fiscal year?",
-      "top_score": 0.8344,
+      "top_score": 0.8342,
       "gate": "n/a",
       "answer": "Expected generation is 141 GWh, of which 30 GWh in the dry season. [1] Expected revenue from energy sales is Rs 87.4 crore. [1]"
     },
@@ -332,7 +332,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What is the insurance budget?",
-      "top_score": 0.6518,
+      "top_score": 0.6514,
       "gate": "n/a",
       "answer": "Item: Insurance; Budget: Rs 1.6 crore. [1]"
     },
@@ -342,7 +342,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "How much loan principal do we repay this year?",
-      "top_score": 0.8213,
+      "top_score": 0.8208,
       "gate": "n/a",
       "answer": "The project loan from the bank consortium led by a commercial bank has Rs 182 crore outstanding at the start of the year. [1] Principal repayment this year is Rs 21 crore and interest is about Rs 17.5 crore, at the consortium's base rate plus 2%. [1]"
     },
@@ -352,7 +352,7 @@
       "rank": 2,
       "facts_ok": true,
       "question": "How much did the plant generate in Q1?",
-      "top_score": 0.5676,
+      "top_score": 0.5675,
       "gate": "n/a",
       "answer": "The plant generated 49.8 GWh in Q1, against a plan of 54.0 GWh. [1]"
     },
@@ -362,7 +362,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "How much cash was in the bank at the end of Ashwin?",
-      "top_score": 0.9254,
+      "top_score": 0.9252,
       "gate": "n/a",
       "answer": "Cash in the bank at the end of Ashwin was Rs 14.3 crore. [1]"
     },
@@ -372,7 +372,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "Who approves a purchase between Rs 50,001 and Rs 5 lakh?",
-      "top_score": 0.9438,
+      "top_score": 0.9436,
       "gate": "n/a",
       "answer": "Amount (per purchase): Rs 50,001 to Rs 5 lakh; Who approves: Head of department and CFO. [1] Amount (per purchase): Rs 5 lakh to Rs 50 lakh; Who approves: CFO and CEO. [1]"
     },
@@ -382,7 +382,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What TDS rate applies to supplier payments for goods?",
-      "top_score": 0.7889,
+      "top_score": 0.7881,
       "gate": "n/a",
       "answer": "Finance deducts TDS at 1.5% on supplier payments for goods and 15% on service fees paid to individuals, as required by the Income Tax Act. [1]"
     },
@@ -392,7 +392,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "When do we need a sealed tender?",
-      "top_score": 0.7721,
+      "top_score": 0.7714,
       "gate": "n/a",
       "answer": "Purchases above Rs 20 lakh need a sealed tender published in a national daily, as required by the company's procurement rules. [1]"
     },
@@ -402,7 +402,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What should we do when sediment at the intake is above 7,000 ppm?",
-      "top_score": 0.9024,
+      "top_score": 0.9021,
       "gate": "n/a",
       "answer": "Sediment at intake: Above 7,000 ppm; Action: Shut down all units and close the intake gate. [1]"
     },
@@ -412,7 +412,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "When can we restart after a sediment shutdown?",
-      "top_score": 0.7975,
+      "top_score": 0.797,
       "gate": "n/a",
       "answer": "Restart only after sediment stays below 4,000 ppm for 2 hours. [1]"
     },
@@ -422,7 +422,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "How long do units stay at speed-no-load after a line trip?",
-      "top_score": 0.9405,
+      "top_score": 0.9403,
       "gate": "n/a",
       "answer": "If the 132 kV line trips, the units go to no-load automatically. [1] Inform the NEA load dispatch centre and keep the units at speed-no-load for up to 30 minutes. [1]"
     },
@@ -432,7 +432,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "When is the annual overhaul done?",
-      "top_score": 0.9072,
+      "top_score": 0.9069,
       "gate": "n/a",
       "answer": "The annual overhaul is done in the dry season, from 10 to 30 Chaitra, when river flow is lowest and only one unit can run anyway. [1]"
     },
@@ -442,7 +442,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "How often do we take a transformer oil sample?",
-      "top_score": 0.9185,
+      "top_score": 0.9181,
       "gate": "n/a",
       "answer": "Check: Transformer oil sample; How often: Every 6 months. [1]"
     },
@@ -452,7 +452,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "Which towers were damaged in the Bhadra line outage?",
-      "top_score": 0.8496,
+      "top_score": 0.8493,
       "gate": "n/a",
       "answer": "At 02:40 on 3 Bhadra 2082, a landslide near Kharidhunga damaged two towers (tower 27 and tower 28) of the 132 kV line between Gongar and Singati. [1]"
     },
@@ -462,7 +462,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "When was the 132 kV line restored after the landslide?",
-      "top_score": 0.6999,
+      "top_score": 0.6997,
       "gate": "n/a",
       "answer": "A temporary bypass line was built and the line was restored at 18:10 on 9 Bhadra. [1] At 02:40 on 3 Bhadra 2082, a landslide near Kharidhunga damaged two towers (tower 27 and tower 28) of the 132 kV line between Gongar and Singati. [2] After 30 minutes without the line, the shift in-charge stopped all units. [2]"
     },
@@ -472,7 +472,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "How long does the SCADA historian keep data?",
-      "top_score": 0.861,
+      "top_score": 0.8613,
       "gate": "n/a",
       "answer": "A historian keeps one-minute averages for 10 years. [1] Engineering staff reach the historian over the company VPN. [1] Export data with the historian's report tool; do not copy the database. [1]"
     },
@@ -482,7 +482,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What is the salary band for grade G3?",
-      "top_score": 0.7401,
+      "top_score": 0.7398,
       "gate": "n/a",
       "answer": "Grade: G3; Typical roles: Junior engineer, accountant, HR officer; Monthly gross salary: Rs 55,000 to Rs 80,000. [1]"
     },
@@ -492,7 +492,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "How much does the company contribute to the Social Security Fund?",
-      "top_score": 0.8149,
+      "top_score": 0.8144,
       "gate": "n/a",
       "answer": "Social Security Fund: the company contributes 20% of basic salary and the employee 11%. [1]"
     },
@@ -502,7 +502,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What is Pemba Sherpa's monthly gross salary?",
-      "top_score": 0.8777,
+      "top_score": 0.8776,
       "gate": "n/a",
       "answer": "Employee record for Pemba Sherpa. employee id: KH-022; name: Pemba Sherpa; grade: G4; position: Maintenance Engineer; location: Gongar; monthly gross: Rs 1,12,000; citizenship no: 69-06-74-42561; mobile: 9866654952; bank account: 0335095259183. [1]"
     },
@@ -512,7 +512,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What is Laxmi Thami's mobile number?",
-      "top_score": 0.894,
+      "top_score": 0.8938,
       "gate": "n/a",
       "answer": "Employee record for Laxmi Thami. employee id: KH-041; name: Laxmi Thami; grade: G2; position: Operator; location: Gongar; monthly gross: Rs 38,500; citizenship no: 55-08-79-69795; mobile: 9842307301; bank account: 0215528829585. [1]"
     },
@@ -522,7 +522,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What increment does a rating of 4 get?",
-      "top_score": 0.9281,
+      "top_score": 0.9279,
       "gate": "n/a",
       "answer": "Rating: 4; Meaning: Exceeds expectations; Increment on basic salary: 7%. [1] Rating: 3; Meaning: Meets expectations; Increment on basic salary: 4%. [1]"
     },
@@ -532,7 +532,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "When are manager reviews due?",
-      "top_score": 0.8078,
+      "top_score": 0.8075,
       "gate": "n/a",
       "answer": "Manager reviews due: 30 Kartik 2082. [1]"
     },
@@ -542,7 +542,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "How many operators are we hiring?",
-      "top_score": 0.3794,
+      "top_score": 0.3788,
       "gate": "n/a",
       "answer": "Position: Operator; Grade: G2; Number: 3; Location: Gongar; Status: Advertised in Ashwin. [1] Operator candidates must hold at least a diploma in electrical or mechanical engineering. [1]"
     },
@@ -552,7 +552,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What is the indicative price for the Upper Kanchan Khola stake?",
-      "top_score": 0.9521,
+      "top_score": 0.952,
       "gate": "n/a",
       "answer": "Management presented a proposal to buy a 70% stake in the 12 MW Upper Kanchan Khola project, which is under construction in Dolakha. [1] The indicative price is Rs 64 crore. [1]"
     },
@@ -562,7 +562,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What refinancing rate did the banks offer?",
-      "top_score": 0.9094,
+      "top_score": 0.9093,
       "gate": "n/a",
       "answer": "The CFO reported that two banks have offered to refinance the project loan at the base rate plus 1.5%, compared with plus 2% today. [1]"
     },
@@ -572,7 +572,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What was the Q1 revenue?",
-      "top_score": 0.7972,
+      "top_score": 0.797,
       "gate": "n/a",
       "answer": "Revenue from energy sales was Rs 26.0 crore, against a plan of Rs 28.2 crore. [1]"
     },
@@ -582,7 +582,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "What is Kabita Rai's salary?",
-      "top_score": 0.866,
+      "top_score": 0.8659,
       "gate": "n/a",
       "answer": "Employee record for Kabita Rai. employee id: KH-014; name: Kabita Rai; grade: G4; position: Senior Accountant; location: Baluwatar; monthly gross: Rs 1,18,000; citizenship no: [redacted]; mobile: [redacted]; bank account: [redacted]. [1]"
     },
@@ -592,7 +592,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "sick leave kati din pauchha?",
-      "top_score": 0.8747,
+      "top_score": 0.8744,
       "gate": "n/a",
       "answer": "Employees get 12 days of paid sick leave a year. [1] Sick leave of more than 3 days in a row needs a doctor's certificate. [1] Unused sick leave can be accumulated up to 45 days. [1]"
     },
@@ -602,7 +602,7 @@
       "rank": 1,
       "facts_ok": true,
       "question": "penstock inspection kahile garne?",
-      "top_score": 0.7693,
+      "top_score": 0.7686,
       "gate": "n/a",
       "answer": "Check: Penstock inspection walk; How often: Every 3 months and after every earthquake above magnitude 5. [1]"
     }
