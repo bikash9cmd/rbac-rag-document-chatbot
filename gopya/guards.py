@@ -43,8 +43,33 @@ _OUT_OF_SCOPE = [
     r"\b(girlfriend|boyfriend|dating)\b",
 ]
 
+# Questions about Gopya itself, and greetings. These are answered with a fixed introduction that
+# depends only on the user's role, never on documents. Each pattern must match the whole
+# (normalised) question, so "help me with expense approval" is still a document question.
+_ABOUT = [
+    r"(hi|hello|hey|namaste|namaskar|good (morning|afternoon|evening))( there)?( gopya)?",
+    r"(what|who) (are|r) (you|u)( exactly)?",
+    r"what is (gopya|this( app| tool| assistant| chatbot)?)",
+    r"(what|who) is this",
+    r"what (can|do) (you|u) do( for me)?",
+    r"(how do (you|u) work|how does (this|it|gopya) work)",
+    r"(help|introduce yourself|tell me about (yourself|gopya)|what do you know)",
+    r"(what|which) (documents|questions) can (i|you) (ask( about)?|see|answer)",
+    r"(timi|tapai|tapain) (ko|ke) (hau|ho|hunuhunchha)",
+]
+
 _inj = [re.compile(p, re.I) for p in _INJECTION]
 _oos = [re.compile(p, re.I) for p in _OUT_OF_SCOPE]
+_about = [re.compile(rf"(?:{p})", re.I) for p in _ABOUT]
+
+
+def is_about(question: str) -> bool:
+    """True for greetings and questions about the assistant itself ("What are you?")."""
+    q = re.sub(r"[^a-z ]+", " ", question.lower())
+    q = re.sub(r"\s+", " ", q).strip()
+    q = re.sub(r"\s+please$", "", q)
+    rest = re.sub(r"^(so|ok|okay|and|please|hi|hello|hey|namaste)( gopya)?\s+", "", q)
+    return any(p.fullmatch(q) or p.fullmatch(rest) for p in _about)
 
 
 @dataclass(frozen=True)
@@ -87,6 +112,32 @@ def redact(text: str) -> tuple[str, list[str]]:
             found.append(name)
             text = pat.sub(REDACTED, text)
     return text, found
+
+
+# One example question per collection. The introduction lists only the user's own collections,
+# which the UI already shows, so it reveals nothing about documents the role cannot read.
+EXAMPLES = {
+    "general": "How many days of sick leave do I get a year?",
+    "finance": "What is the dry season tariff in FY 2082/83?",
+    "engineering": "What should operators do when sediment is above 7,000 ppm?",
+    "hr": "What is the salary band for grade G4?",
+    "board": "What refinancing rate did the banks offer?",
+}
+
+
+def introduction(role_name: str, collections: frozenset[str]) -> str:
+    readable = ", ".join(sorted(collections)) or "no"
+    tries = [EXAMPLES[c] for c in sorted(collections, key=lambda c: (c != "general", c)) if c in EXAMPLES][:3]
+    text = (
+        "I'm Gopya, Kanchan Hydro's internal assistant. I answer questions about the company's own "
+        "policies, operations and records, using only the documents your role is allowed to read "
+        f"(you're signed in as {role_name}, which can read the {readable} documents). Every answer "
+        "cites the document it came from, and if something isn't in your documents I say so "
+        "instead of guessing."
+    )
+    if tries:
+        text += "\n\nYou could ask:\n" + "\n".join(f"- {t}" for t in tries)
+    return text
 
 
 REFUSALS = {

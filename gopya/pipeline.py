@@ -6,10 +6,11 @@ from dataclasses import dataclass, field
 
 from .answer import ExtractiveAnswerer, LlmAnswerer
 from .config import Settings, settings as load_settings
-from .guards import REFUSALS, check_input, redact
+from .guards import REFUSALS, check_input, introduction, is_about, redact
 from .index import Index
 from .llm import ChatClient
 from .rbac import Directory, User
+from .text import tokens
 from .trace import Trace, TraceLog, cost_usd
 
 
@@ -30,7 +31,7 @@ class Source:
 @dataclass
 class Response:
     answer: str
-    decision: str  # "answered", "not_found", "injection", "out_of_scope", "empty", "too_long"
+    decision: str  # "answered", "about", "not_found", "injection", "out_of_scope", "empty", "too_long"
     sources: list[Source] = field(default_factory=list)
     trace: dict = field(default_factory=dict)
 
@@ -38,6 +39,17 @@ class Response:
         if not self.sources:
             return self.answer
         return self.answer + "\n\nSources:\n" + "\n".join(str(s) for s in self.sources)
+
+
+# "Tell me about the company" has one content word, and "company" appears in half the documents.
+# Questions that only name the company are asked as a request for the overview instead. This is a
+# fixed rewrite of the question, so it cannot depend on what the user's role may read.
+_COMPANY_WORDS = frozenset(tokens("company kanchan hydro business organisation organization firm work"))
+
+
+def _expand(question: str) -> str:
+    q = set(tokens(question))
+    return "Kanchan Hydro company overview" if q and q <= _COMPANY_WORDS else question
 
 
 class Gopya:
@@ -71,7 +83,10 @@ class Gopya:
         t.lap("guard_in")
         if not check.ok:
             return self._finish(t, Response(REFUSALS[check.reason].format(role=role.name), check.reason))
+        if is_about(question):  # "What are you?": answered from the role alone, never from documents
+            return self._finish(t, Response(introduction(role.name, role.collections), "about"))
 
+        question = _expand(question)
         hits = self.index.search(question, role.collections, self.cfg.top_k)
         t.lap("retrieve")
         t.retrieved = [h.chunk.id for h in hits]
